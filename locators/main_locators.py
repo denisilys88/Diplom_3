@@ -7,26 +7,22 @@ class MainLocators:
     CONSTRUCTOR = (By.XPATH, ".//h1[text()='Соберите бургер']")
 
     ORDER_LINE_BUTTON = (By.XPATH, ".//p[text()='Лента Заказов']")
-    ORDER_LINE = (By.XPATH, ".//div[@class='OrderFeed_contentBox__3-tWb']")
+    ORDER_LINE = (By.XPATH, ".//div[contains(@class,'OrderFeed_contentBox')]")
     ORDER_LINE_ELEMENT_BUN = (By.XPATH, ".//a[@href='/ingredient/61c0c5a71d1f82001bdaaa6d']")
-    ORDER_BUN_COUNTER = (By.XPATH, ".//a[@href='/ingredient/61c0c5a71d1f82001bdaaa6d']//p[@class='counter_counter__num__3nue1']")
-    ORDER_ELEMENT_DETAILS_POP_UP = (By.XPATH, ".//div[@class='Modal_modal__container__Wo2l_']")
-
+    ORDER_BUN_COUNTER = (By.XPATH, ".//a[@href='/ingredient/61c0c5a71d1f82001bdaaa6d']//p[starts-with(@class,'counter')]")
+    ORDER_ELEMENT_DETAILS_POP_UP = (By.XPATH, ".//div[contains(@class,'modal__container')]")
     ORDER_LINE_ELEMENT_SAUCE = (By.XPATH, ".//a[@href='/ingredient/61c0c5a71d1f82001bdaaa72']")
-    ORDER_SAUCE_COUNTER = (By.XPATH, ".//a[@href='/ingredient/61c0c5a71d1f82001bdaaa72']//p[@class='counter_counter__num__3nue1']")
+    ORDER_SAUCE_COUNTER = (By.XPATH, ".//a[@href='/ingredient/61c0c5a71d1f82001bdaaa72']//p[starts-with(@class,'counter')]")
+    ORDER = (By.XPATH, ".//section[contains(@class,'BurgerConstructor')]")
+    ORDER_IN_ORDER_LINE = (By.XPATH, ".//ul[contains(@class,'OrderFeed_list')]//li")
+    ORDER_DETAILS_POP_UP = (By.XPATH, ".//div[contains(@class,'Modal_orderBox')]")
+    ORDER_IN_WORK = (By.XPATH, ".//ul[contains(@class,'OrderFeed')]/li[contains(@class,'text')]")
 
-    ORDER = (By.XPATH, ".//section[@class='BurgerConstructor_basket__29Cd7 mt-25 ']")
-    ORDER_IN_ORDER_LINE = (By.XPATH, ".//a[@class='OrderHistory_link__1iNby']")
-    ORDER_DETAILS_POP_UP = (By.XPATH, ".//div[@class='Modal_orderBox__1xWdi Modal_modal__contentBox__sCy8X p-10']")
-    ORDER_IN_WORK = (By.XPATH, ".//ul[@class='OrderFeed_orderListReady__1YFem OrderFeed_orderList__cBvyi']/li[@class='text text_type_digits-default mb-2']")
-
-    CLOSE_DETAILS_BUTTON = (
-    By.XPATH, ".//button[@class='Modal_modal__close_modified__3V5XS Modal_modal__close__TnseK']")
-
+    CLOSE_DETAILS_BUTTON = (By.XPATH, ".//button[contains(@class,'close')]")
     MAKE_ORDER_BUTTON = (By.XPATH, ".//button[text()='Оформить заказ']")
-    MADE_ORDER_POP_UP = (By.XPATH, ".//div[@class='Modal_modal__contentBox__sCy8X pt-30 pb-30']")
-    MADE_ORDER_POP_UP_NUMBER = (By.XPATH, ".//div[@class='Modal_modal__contentBox__sCy8X pt-30 pb-30']/h2")
-    MADE_ORDER_IN_ORDER_LINE = (By.XPATH, ".//div[@class='OrderHistory_textBox__3lgbs mb-6']/p[@class='text text_type_digits-default']")
+    MADE_ORDER_POP_UP = (By.XPATH, ".//div[contains(@class,'modal__contentBox')]")
+    MADE_ORDER_POP_UP_NUMBER = (By.XPATH, ".//div[contains(@class,'modal__contentBox')]/h2")
+    MADE_ORDER_IN_ORDER_LINE = (By.XPATH, ".//div[contains(@class,'OrderHistory')]/p[contains(@class,'text')]")
 
-    ALLTIME_ORDER_COUNTER = (By.XPATH, ".//div[@class='undefined mb-15']/p[@class='OrderFeed_number__2MbrQ text text_type_digits-large']")
-    DAILY_ORDER_COUNTER = (By.XPATH, ".//div/p[text()='Выполнено за сегодня:']/../p[@class='OrderFeed_number__2MbrQ text text_type_digits-large']")
+    ALLTIME_ORDER_COUNTER = (By.XPATH, ".//p[text()='Выполнено за все время:']/../p[contains(@class,'OrderFeed_number')]")
+    DAILY_ORDER_COUNTER = (By.XPATH, ".//p[text()='Выполнено за сегодня:']/../p[contains(@class,'OrderFeed_number')]")

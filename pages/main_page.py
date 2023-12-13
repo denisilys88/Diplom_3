@@ -35,7 +35,7 @@ class MainPage(BasePage):
 
     @allure.step('Нажимаем кнопку закрытия окна с деталями ингредиента')
     def click_close_details_button(self):
-        return self.find_element(MainLoc.CLOSE_DETAILS_BUTTON).click()
+        return self.find_element(MainLoc.CLOSE_DETAILS_BUTTON, 20).click()
 
     @allure.step('Нажимаем на заказ в ленте заказов')
     def click_order_in_order_line(self):
